@@ -39,11 +39,12 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
       let absolutePath:string
       try{
          absolutePath = await filterImageFromURL(image_url)
-      }catch{
-        console.log("ERRROR!!!")
+      }catch(err){
+        res.status(422).send("Cannot process image url")
       }
-      console.log("ABSS",absolutePath)
-      res.sendFile(absolutePath,()=>{
+      
+      res.status(200).sendFile(absolutePath,(err)=>{
+        if (err) { return res.status(422).send(`Not able to process the image`); }
         deleteLocalFiles([absolutePath])
       })  
   });
