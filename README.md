@@ -7,4 +7,7 @@ http://image-filter-starter-code-dev22222222222.us-east-1.elasticbeanstalk.com
 ### Endpoint URL for a running elastic beanstalk deployment (EB_URL) with image
 http://image-filter-starter-code-dev22222222222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/1/15/White_Persian_Cat.jpg
 
+### Local Endpoint
+http://localhost:8082/filteredimage?image_url=https://timedotcom.files.wordpress.com/2019/03/kitten-report.jpg
+
 
